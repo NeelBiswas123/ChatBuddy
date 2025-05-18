@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="./chatlogo.png" />
+  <title>ChatBuddy  || Best Chat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(45deg,pink, blue , rgb(122, 18, 58));
+     min-height: 100vh;
+      color: #c9d1d9;
+    }
+/* for bot gif disappear */
+    #bot-gif {
+    transition: opacity 1s ease-in-out;
+    margin-top: -80px;
+  }
+
+    header {
+      background-color: #161b22;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border-bottom: 1px solid #30363d; */
+      border-bottom: none;
+    }
+
+    header h1 {
+      color: #f0f6fc;
+      font-size: 2rem;
+    }
+
+    
+
+/* button to choose category   */
+    .button {
+      background-color: #238636;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin:  10px;
+      
+    }
+
+    .button:hover {
+      background-color: #2ea043;
+    }
+/* to set all text center  */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 20px;
+      color: #f0f6fc;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #e8f3ff;
+    
+    
+    }
+
+/* section for feature like real time chat no login etc  */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* padding: 60px 20px; */
+     
+    }
+
+    .feature {
+      max-width: 300px;
+      /* padding: 20px; */
+      text-align: center;
+      margin: 10px;
+      border: 5px  solid transparent ;
+      border-image: linear-gradient(60deg,red,green,violet);
+       border-image-slice: 1;
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      color: #f0f6fc;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: white;
+      font-size: 0.95rem;
+    }
+
+/* the bottom part      */
+    footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+    color: white;
+    margin-top: 20vh;
+
+
+      
+    }
+
+/* for mobile compatible      */
+    @media (max-width: 380px) {
+      header {
+        /* flex-direction: column;
+        align-items: flex-start; */
+        border-bottom: none;
+      }
+      body {
+        background: linear-gradient(45deg,pink, blue , green);
+      }
+
+     
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ChatBuddy</h1>
+
+  </header>
+
+  <section class="hero">
+    <img id="bot-gif" src="./Public/botHi.gif" alt="">
+    <h2>The Messaging APP</h2>
+    <p> your buddy who lets you to  connect with people and chat continuously</p>
+    <p> Select your category to start</p>
+ 
+    <!-- <a href="#" class="button">Start Chatting</a> -->
+    <a class="button" href="./Public/chat.html?version=general">General</a>
+    <a class="button" href="./Public/chat.html?version=sports">Sports</a>
+    <a class="button" href="./Public/chat.html?version=tech">Tech</a>
+
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">💬</div>
+      <h3>Real-time Chat</h3>
+      <p>Send and receive messages instantly using WebSocket-powered connections.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">👍</div>
+      <h3>NO Registration</h3>
+      <p>Easy to Use without Registration just type your name and start chatting</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <h3>No-more Stored</h3>
+      <p>Your chat is protected cause we dont store any data</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ChatBuddy. Built for chatter, by a chatter.
+  </footer>
+
+</body>
+
+
+<!-- it's for gif will disappear after 10 sec  -->
+<script>
+   window.onload = function() {
+    const gif = document.getElementById('bot-gif');
+    setTimeout(() => {
+      gif.style.opacity = '0';
+     
+    }, 10000);
+  };
+</script>
+
+</html>

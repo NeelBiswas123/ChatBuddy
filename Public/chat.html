@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../chatlogo.png" />
+  <title>ChatBuddy</title>
+
+  <link rel="stylesheet" href="../Public/style.css">
+
+<!-- for socket.io to receive and send msg req -->
+<script defer src="http://localhost:7000/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+<!-- main logo on the website  -->
+    <div class="topLogo">
+
+      <img src="../chatlogo.png" alt="ChatBuddy logo">
+    </div>
+
+  <div class="heading"> 
+    <h1 id="chat-heading">Welcome to Chatbuddy</h1>
+  </div>
+
+
+<!-- search  -->
+
+  
+<div class="container">
+
+<!-- this is for chat container section   -->
+  <div class="chat" > 
+
+  </div>
+  
+<!-- for sending message  -->
+    <div class="send">
+      <form  action="#" id="send-container" class="send-container">
+        <input type="text"  id="message-input" name="message-input" placeholder="Type something..... " />
+        <button class="btn" type="submit" >Send </button>
+      </form>
+    </div>
+    
+  </div>
+
+<!-- for back button  -->
+  <button class="backButton" onclick='window.location.href = "../index.html"'>Back</button>
+
+
+
+<!-- footer  -->
+  <div class="footer">
+    <footer> &copy; 2025 ChatBuddy. Built for chatter, by a chatter.</footer>
+  </div>
+
+
+
+
+
+<!-- Dark Mode toggle  -->
+    <div class="darkmode">
+    
+      <div class="darkMode-Toggle">
+        <input type="checkbox" id="toggleDarkMode" class="toggle-checkbox">
+        <label for="toggleDarkMode" class="toggle-Label">
+          <i class="icon-light">☀️</i>
+          <i class="icon-dark">🌜</i>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<script defer src="../script.js"></script>
+
+
+</html>

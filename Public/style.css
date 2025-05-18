@@ -1,0 +1,477 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(60deg, pink, #bbbbe9, #F4CBC6 , #98FF98);
+    
+    background-size: 400% 400%; /* Enlarges the gradient for animation  */
+    animation: gradientAnimation 10s ease infinite; 
+    /* background-color: pink; */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 10% 60%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 70% 30%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.topLogo{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 7rem;
+}
+
+.heading{
+    color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+
+/* dark Mode  */
+         .darkmode {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            
+        }
+        
+            /* Dark mode Capsule*/
+            .darkMode-Toggle {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            }
+
+            /* Hide the checkbox */
+            .toggle-checkbox {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            }
+
+            /* Slider */
+            .toggle-Label {
+            position: relative;
+            cursor: pointer;
+            background-color: #ccc;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3px 1px;
+            
+            }
+
+            /* Sun and Moon */
+            .icon-light,
+            .icon-dark {
+            font-size: 15px;
+            
+            }
+
+            /* Ball inside slider */
+            .toggle-slider {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.2s;
+            }
+
+            /* Dark mode active (slider position) */
+            .toggle-checkbox:checked + .toggle-Label .toggle-slider {
+            transform: translateX(25px);
+            }
+
+            
+            .toggle-checkbox:checked + .toggle-Label .icon-dark {
+            display: none;
+            }
+
+            /* Dark Mode Body Styling */
+            body.dark-mode {
+                background: #121212;
+                color: white;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            
+
+
+
+
+/* search  */
+
+    
+
+    .chat{
+        height: 400px;
+        overflow-y: scroll;
+        margin: 20px 0;
+        padding: 10px;
+        border: 2px solid rgb(53, 44, 179);
+        border-radius: 5px;
+        background: rgb(66, 61, 61);
+    }
+
+  
+
+
+
+/* for type msg area  */
+
+
+ 
+    .send-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        padding: 3px;
+        background-color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        width: 28rem;
+        position: relative; 
+        padding-right: 4rem; 
+    } 
+    
+    .send-container .btn {
+        position: absolute;
+        right: -5rem; /* move it outside the container */
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #267dda;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+
+    .send-container #message-input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 7px 18px;
+        font-size: 20px;
+        /* font-weight: bold; */
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: transparent;
+
+        /* this is to resize placeholder */
+        position: relative;
+        top: 2px;
+    }
+
+    
+
+
+
+
+/* search area (black and grey area)     */
+    .container {
+        width: 600px;
+        margin: 5px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: #64646f33 0px 7px 29px 0px;
+        background: #31363F;
+    }
+
+    
+
+    .chat {
+        height: 400px;
+        overflow-y: scroll;
+        margin: 20px 0;
+        padding: 10px;
+        border: 2px solid #545250;
+        border-radius: 5px;
+        background: #222831;
+    }
+
+    .message {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+
+    
+
+
+
+
+
+ /* message display container (message properties)    */
+        .message {
+            padding: 10px 15px;
+            width: fit-content;            
+            max-width: 25rem;       
+            border-radius: 15px;
+            clear: both;
+            white-space: normal;   
+            word-wrap: break-word;  
+            
+            
+        }
+
+
+
+        .left {
+            
+            background-color: white;
+            color: #000;
+            display: block;
+            
+            
+        }
+        .right {
+
+            background-color: rgb(56, 83, 204);
+            color: rgb(255, 255, 255);
+            display: block;
+            float: right;
+           
+                  
+            
+        }
+
+        .center {
+            color: whitesmoke;
+            background-color: grey;
+            text-align: center;
+            margin: 10px auto;   /* centers the box */
+            width: fit-content;  /* make the box fit its text */
+            padding: 5px 15px;  /* add spacing inside */
+            border-radius: 15px;
+            clear: both;
+        }
+        
+
+
+/* this is for back button  */
+        .backButton{
+            position: absolute;  
+            top: 90%;           
+            left: 50%;          
+            transform: translate(-50%, -50%); 
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #394fc9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+
+
+
+/* footer  */
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* height: 20px; */
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        
+        color: white;
+
+    }
+
+
+
+
+
+/* media query for responsiveness to all devices(phones and tab) */
+
+@media ( max-width:500px)  {
+
+
+/* dark Mode  */
+    .darkmode {
+    position: fixed;
+    top: 2px;
+    right: 20px;
+    
+    }
+
+
+
+/* this is for the container (black box)*/
+    .container {
+       
+        position: relative;
+        /* top: 100px; */
+
+        width: 350px;
+        height: 500px;
+        margin: 1px auto;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: #64646f33 0px 7px 29px 0px;
+        background: #31363F;
+    }
+    .chat {
+        height: 400px;
+        overflow-y: scroll;
+        margin: 20px 0;
+        padding: 10px;
+        border: 2px solid #545250;
+        border-radius: 5px;
+        background: #222831;
+    }
+
+    .send-container{
+        bottom: 10px;
+        height: 35px;
+        width: 50vw;    
+    }
+    #message-input{
+        margin-left: 3rem;
+
+    }
+
+
+/* this is for send button */
+     .btn {
+        height: 40px;
+        width: 15vw; 
+        margin-right: 10px;
+        padding: 5px 5px !important;
+
+       
+    }
+
+
+
+    .message {
+        padding: 10px 15px;
+        width: fit-content;            
+        max-width: 10rem;       
+        border-radius: 15px;
+        clear: both;
+        white-space: normal;   
+        word-wrap: break-word;  
+              
+    }
+    
+
+
+}
+
+
+
+
+
+/* this is for devices less than 400px width  */
+@media ( max-width:380px)  {
+
+
+/* dark Mode  */
+    .darkmode {
+    position: fixed;
+    top: 2px;
+    right: 20px;
+    
+    }
+
+
+
+/* this is for the container (black box)*/
+    .heading{
+        margin-bottom: -10px;
+        margin-top: -25px;
+    }
+    .container {
+       
+        position: relative;
+        /* top: 100px; */
+
+        width: 300px;
+        height: 400px;
+        margin: 1px auto;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: #64646f33 0px 7px 29px 0px;
+        background: #31363F;
+    }
+    .chat {
+        height: 300px;
+        overflow-y: scroll;
+        margin: 20px 0;
+        padding: 10px;
+        border: 2px solid #545250;
+        border-radius: 5px;
+        background: #222831;
+    }
+
+    .send-container{
+        bottom: 10px;
+        height: 35px;
+        width: 50vw; 
+   
+    }
+    #message-input{
+        margin-left: 5rem;
+
+    }
+
+
+/* this is for send button */
+     .btn {
+        height: 40px;
+        width: 12vw; 
+        margin-right: 30px;
+        padding: 5px 5px !important;
+
+       
+    }
+
+
+
+    .message {
+        padding: 10px 15px;
+        width: fit-content;            
+        max-width: 10rem;       
+        border-radius: 15px;
+        clear: both;
+        white-space: normal;   
+        word-wrap: break-word;  
+              
+    }
+    
+
+
+}
