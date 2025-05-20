@@ -5,7 +5,10 @@ const urlParams = new URLSearchParams(window.location.search);
 // const username = urlParams.get('username');
 const version = urlParams.get('version');
 
-const socket = io("http://localhost:7000")
+// const socket = io("http://localhost:7000") // for local host 
+const socket = io("https://chatbuddy-0nsc.onrender.com"); // for render host
+
+
 
 const form = document.getElementById("send-container")
 
