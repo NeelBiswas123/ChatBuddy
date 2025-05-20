@@ -372,7 +372,8 @@ body {
         width: 50vw;    
     }
     #message-input{
-        margin-left: 8rem;
+        margin-left: 4rem;
+        font-size: 10px;
         
 
     }
