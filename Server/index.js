@@ -4,6 +4,7 @@ import http from "http";
 const server = http.createServer();
 const allowedOrigins = ["http://127.0.0.1:5500", "http://127.0.0.1:5501"]; // Allow both ports (use if you dont want everything on line 9)
 
+//CORS setting
 const io = new Server(server, {
   cors: {
     origin: "*", // ( caution type :- allowed origins on "* " if u want only 1 or 2 specific port)
@@ -11,7 +12,7 @@ const io = new Server(server, {
   }
 });
 
-console.log(`WebSocket server allowing connections from ${allowedOrigins}`);
+// console.log(`WebSocket server allowing connections from ${allowedOrigins}`);
 
 
 
@@ -52,6 +53,8 @@ io.on('connection', socket => {
 });
 
 // Start the server
-server.listen(7000, () => {
-  console.log("Socket server is running on port 7000");
+const PORT = process.env.PORT || 7000;
+
+server.listen(PORT, () => {
+  console.log(`Socket server is running on port ${PORT}`);
 });

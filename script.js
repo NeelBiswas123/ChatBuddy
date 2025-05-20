@@ -57,7 +57,6 @@ const messagecontainer = document.querySelector(".chat")
     socket.emit("New-user-joined",{username,version})
 
 
-
 // for handling submitted messages 
     form.addEventListener("submit",(e)=>{
         e.preventDefault();
@@ -67,9 +66,6 @@ const messagecontainer = document.querySelector(".chat")
         messageInput.value=""
         
     })
-
-
-
 
 // handling messages for both side 
     const append = (message,position)=>{
@@ -89,10 +85,7 @@ const messagecontainer = document.querySelector(".chat")
         }
     }
 
-
-
 //if new user joined display(to others)
-
 
     socket.on("User-joined", name => {
        
