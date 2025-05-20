@@ -5,8 +5,13 @@ const urlParams = new URLSearchParams(window.location.search);
 // const username = urlParams.get('username');
 const version = urlParams.get('version');
 
-// const socket = io("http://localhost:7000") // for local host 
-const socket = io("https://chatbuddy-0nsc.onrender.com"); // for render host
+// // const socket = io("http://localhost:7000") // for localhost use
+// const socket = io("https://chatbuddy-0nsc.onrender.com"); // for render.com host (comment it and uncomment prev line if using localhost )
+
+
+// Auto-select backend URL based on environment
+const isLocalhost = window.location.hostname === "localhost";
+const socket = io(isLocalhost ? "http://localhost:7000" : "https://chatbuddy-0nsc.onrender.com");
 
 
 

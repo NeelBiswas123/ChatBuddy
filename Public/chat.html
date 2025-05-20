@@ -9,8 +9,8 @@
 
   <link rel="stylesheet" href="../Public/style.css">
 
-<!-- for socket.io to receive and send msg req -->
-<script defer src="http://localhost:7000/socket.io/socket.io.js"></script>
+<!-- for socket.io to receive and send msg req (only for localhost) -->
+<!-- <script defer src="http://localhost:7000/socket.io/socket.io.js"></script> -->
 </head>
 
 <body>
@@ -74,6 +74,33 @@
 
 
 
+      
+
+<!-- for adding logic that if it's run on localhost use normal method like line 85 or for github pages add this on line 84 -->
+
+<script>
+  const isGithub = window.location.hostname === "neelbiswas123.github.io";
+
+  // Dynamically load socket.io script
+  const socketScript = document.createElement("script");
+  socketScript.src = isGithub
+    ? "https://chatbuddy-0nsc.onrender.com/socket.io/socket.io.js"
+    : "http://localhost:7000/socket.io/socket.io.js";
+  socketScript.defer = true;
+
+  // Load script.js ONLY after socket.io is loaded
+  socketScript.onload = () => {
+    const mainScript = document.createElement("script");
+    mainScript.src = isGithub
+      ? "/ChatBuddy/script.js"
+      : "../script.js";
+    mainScript.defer = true;
+    document.body.appendChild(mainScript);
+  };
+
+  document.body.appendChild(socketScript);
+</script>
+
 
 
 
@@ -89,7 +116,7 @@
 
 
 
-<script defer src="/script.js"></script>
+<!-- <script defer src="/script.js"></script> -->
 
 
 </html>
