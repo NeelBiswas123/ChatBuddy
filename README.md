@@ -2,6 +2,13 @@
 
 Welcome to **ChatBuddy**—a lightweight, real-time group chat app that lets users discuss various topics instantly and effortlessly. Whether it's **General, Sports, or Tech**, this platform enables seamless conversations without requiring account creation. Just **enter a name, join the chat, and start engaging!** 🚀  
 
+## N.B.
+   Note I'm using  free server from render.com to host my website so server usually gets in ideal position when no user is connected and eventually my JS doesn't work that time 
+   so wait for 15 sec after reaching chat section of my webpage ( it will start the server ) and then press back button and then it will work as expected.
+
+## 🌐 Website Link
+   https://neelbiswas123.github.io/ChatBuddy/
+   
 ## ✨ Features  
 - **Instant Chat** - No sign-ups, no hassle! Just enter a name and start talking.  
 - **Fast & Lightweight** - Powered by **Socket.io**, ensuring smooth real-time interactions.  
